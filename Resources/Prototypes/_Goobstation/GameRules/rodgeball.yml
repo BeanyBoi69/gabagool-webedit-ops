@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseGameRule
+  id: RodgeballScheduler
+  components:
+  - type: GameRule
+  - type: BasicStationEventScheduler
+    minimumTimeUntilFirstEvent: 45
+    minMaxEventTiming:
+      min: 45
+      max: 120 
+    scheduledGameRules: !type:NestedSelector
+      tableId: BasicMeteorSwarmEventsTable
