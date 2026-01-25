@@ -85,11 +85,7 @@
   maxPlayers: 20
   description: rodgeball-description
   rules:
-    - MeteorSwarmScheduler
-    - RampingStationEventScheduler
-    - SpaceTrafficControlEventScheduler
-    - SpaceTrafficControlFriendlyEventScheduler
-    - BasicRoundstartVariation
+    - RodgeballScheduler
 
 - type: gamePreset
   id: KesslerSyndrome

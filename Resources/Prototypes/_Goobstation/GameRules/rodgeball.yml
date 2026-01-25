@@ -1,8 +1,57 @@
+- type: entity
+  id: ImmovableRodSpawnFast
+  parent: BaseGameRule
+  components:
+  - type: StationEvent
+    startAnnouncement: station-event-immovable-rod-start-announcement
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    minimumPlayers: 25
+  - type: GameRule
+    delay:
+      min:  0
+      max:  1
+  - type: ImmovableRodRule
+    rodPrototypes:
+    - id: ImmovableRodKeepTiles
+      prob: 0.25
+      orGroup: rodProto
+    - id: ImmovableRodMop
+      prob: 0.05
+      orGroup: rodProto
+    - id: ImmovableRodShark
+      prob: 0.05
+      orGroup: rodProto
+    - id: ImmovableRodClown
+      prob: 0.05
+      orGroup: rodProto
+    - id: ImmovableRodSkibidi
+      prob: 0.05
+      orGroup: rodProto
+    - id: ImmovableRodHammer
+      prob: 0.05
+      orGroup: rodProto
+    - id: ImmovableRodThrongler
+      prob: 0.05
+      orGroup: rodProto
+    - id: ImmovableRodGibstick
+      prob: 0.05
+      orGroup: rodProto
+    - id: ImmovableRodWeh
+      prob: 0.05
+      orGroup: rodProto
+    - id: ImmovableRod
+      prob: 0.25
+      orGroup: rodProto
+    - id: ImmovableRodSlow
+      prob: 0.1
+      orGroup: rodProto
+
 - type: entityTable
   id: RodEventTable
-  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+  table: !type:AllSelector 
     children:
-    - id: ImmovableRodSpawn
+    - id: ImmovableRodSpawnFast
 
 
 - type: entity
@@ -11,10 +60,10 @@
   components:
   - type: GameRule
   - type: BasicStationEventScheduler
-    minimumTimeUntilFirstEvent: 45
+    minimumTimeUntilFirstEvent: 0
     minMaxEventTiming:
-      min: 45
-      max: 120 
+      min: 0
+      max: 1 
     scheduledGameRules: !type:NestedSelector
       tableId: RodEventTable
 
