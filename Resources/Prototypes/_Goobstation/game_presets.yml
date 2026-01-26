@@ -260,3 +260,16 @@
   - MeteorSwarmScheduler
   - SpaceTrafficControlEventScheduler
   - BasicRoundstartVariation
+
+- type: gamePreset
+  id: Rodgeball
+  alias:
+  - dodgeball
+  - rodspam
+  name: rodgeball-title
+  description: rodgeball-description
+  showInVote: true
+  maxPlayers: 20
+  rules:
+    - RodgeballScheduler
+    - Rodgeball

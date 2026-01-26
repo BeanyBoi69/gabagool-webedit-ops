@@ -76,18 +76,6 @@
     - BasicRoundstartVariation
 
 - type: gamePreset
-  id: Rodgeball
-  alias:
-    - dodgeball
-    - rodspam
-  name: rodgeball-title
-  showInVote: true
-  maxPlayers: 20
-  description: rodgeball-description
-  rules:
-    - RodgeballScheduler
-
-- type: gamePreset
   id: KesslerSyndrome
   alias:
     - kessler

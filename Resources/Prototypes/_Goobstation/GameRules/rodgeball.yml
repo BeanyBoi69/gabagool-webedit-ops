@@ -1,4 +1,29 @@
 - type: entity
+  id: Rodgeball
+  parent: BaseGameRule
+  components:
+  - type: DeathMatchRule
+    killCap: -10
+    rewardSpawns:
+    - id: HealingToolbox
+    - id: ClothingOuterArmorBasicSlim
+    - id: ClothingOuterHardsuitEVA
+    - id: ClothingShoesBootsMag
+    - id: EmergencyNitrogenTankFilled
+    - id: EmergencyOxygenTankFilled
+    - id: EmergencyPlasmaTankFilled
+    - id: EmergencyWaterVaporTankFilled
+    - id: ClothingHeadHelmetEVA
+    - id: ClothingHeadHelmetEVALarge
+  - type: KillCalloutRule
+  - type: RespawnDeadRule
+  - type: RespawnTracker
+    respawnDelay: 5
+  - type: MaxTimeRestartRule
+    roundMaxTime: 480
+    roundEndDelay: 15
+
+- type: entity
   id: ImmovableRodSpawnFast
   parent: BaseGameRule
   components:
@@ -6,53 +31,47 @@
     startAnnouncement: station-event-immovable-rod-start-announcement
     startAudio:
       path: /Audio/Announcements/attention.ogg
-    minimumPlayers: 25
-  - type: GameRule
-    delay:
-      min:  0
-      max:  1
   - type: ImmovableRodRule
     rodPrototypes:
     - id: ImmovableRodKeepTiles
-      prob: 0.25
+      prob: 0.75
       orGroup: rodProto
     - id: ImmovableRodMop
-      prob: 0.05
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRodShark
-      prob: 0.05
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRodClown
-      prob: 0.05
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRodSkibidi
-      prob: 0.05
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRodHammer
-      prob: 0.05
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRodThrongler
-      prob: 0.05
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRodGibstick
-      prob: 0.05
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRodWeh
-      prob: 0.05
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRod
-      prob: 0.25
+      prob: 0.025
       orGroup: rodProto
     - id: ImmovableRodSlow
-      prob: 0.1
+      prob: 0.025
       orGroup: rodProto
 
-- type: entityTable
-  id: RodEventTable
-  table: !type:AllSelector 
-    children:
-    - id: ImmovableRodSpawnFast
-
+#- type: entityTable
+#  id: RodEventTable
+#  table: !type:AllSelector 
+#    children:
+#    - id: ImmovableRodSpawnFast
 
 - type: entity
   parent: BaseGameRule
@@ -64,6 +83,4 @@
     minMaxEventTiming:
       min: 0
       max: 1 
-    scheduledGameRules: !type:NestedSelector
-      tableId: RodEventTable
-
+    scheduledGameRules: ImmovableRodSpawnFast
