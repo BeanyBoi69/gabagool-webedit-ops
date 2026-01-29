@@ -1,0 +1,12 @@
+- type: constructionGraph
+  id: ExplorerSuit
+  start: start
+  graph:
+    - node: start
+      entity: ClothingOuterVoidsuitSecurity
+      edges:
+      - to: ClothingOuterHardsuitSecurity
+        steps:
+          - material: SecurityPlatingHardsuit
+            amount: 1
+            doAfter: 10

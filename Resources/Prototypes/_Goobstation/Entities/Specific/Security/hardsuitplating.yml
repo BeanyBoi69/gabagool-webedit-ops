@@ -1,0 +1,31 @@
+- type: entity
+  parent: MaterialBase
+  id: SecurityPlatingHardsuit
+  name: security armor plating
+  description: Tough, steel-graphene armor plating. Can be applied to security hardsuits for more armor.
+  suffix: Full
+  components:
+  - type: Sprite
+    sprite: Objects/Materials/hide.rsi
+    layers:
+    - state: goliath_hide
+      map: [ "base" ]
+  - type: StaticPrice
+    price: 1000
+  - type: Appearance
+  - type: Stack
+    stackType: GoliathHide
+    baseLayer: base
+    layerStates:
+    - goliath_hide
+    - goliath_hide_2
+    - goliath_hide_3
+  - type: Item
+    size: Large
+    heldPrefix: goliathhide
+    sprite: Objects/Materials/hide.rsi
+    shape:
+    - 0,0,2,2
+  - type: Tag
+    tags:
+    - GoliathPlate
