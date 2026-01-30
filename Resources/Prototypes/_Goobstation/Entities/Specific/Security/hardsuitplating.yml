@@ -6,26 +6,15 @@
   suffix: Full
   components:
   - type: Sprite
-    sprite: Objects/Materials/hide.rsi
+    sprite: _Goobstation/Objects/Materials/materials.rsi
     layers:
-    - state: goliath_hide
-      map: [ "base" ]
+    - state: armor_plate
   - type: StaticPrice
     price: 1000
   - type: Appearance
-  - type: Stack
-    stackType: GoliathHide
-    baseLayer: base
-    layerStates:
-    - goliath_hide
-    - goliath_hide_2
-    - goliath_hide_3
   - type: Item
     size: Large
-    heldPrefix: goliathhide
-    sprite: Objects/Materials/hide.rsi
+    sprite: _Goobstation/Objects/Materials/materials.rsi
+    state: armor_plate
     shape:
-    - 0,0,2,2
-  - type: Tag
-    tags:
-    - GoliathPlate
+    - 0,0,4,4

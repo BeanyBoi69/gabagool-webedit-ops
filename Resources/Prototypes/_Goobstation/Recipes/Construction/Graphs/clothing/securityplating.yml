@@ -1,5 +1,5 @@
 - type: constructionGraph
-  id: ExplorerSuit
+  id: HardsuitUpgradeSecurity
   start: start
   graph:
     - node: start
