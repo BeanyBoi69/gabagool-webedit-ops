@@ -5,6 +5,7 @@
   components:
   - type: Sprite
     layers:
+    sprite: _Goobstation/Objects/Specific/Janitorial/trashbag.rsi
     - state: magnet-icon-0
       map: ["enum.StorageFillLayers.Fill"]
   - type: Item
