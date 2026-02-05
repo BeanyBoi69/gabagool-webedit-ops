@@ -2,6 +2,7 @@
   name: magnetized trash bag
   id: TrashBagMagnet
   parent: TrashBag
+  description: A trashbag with an internalized magnet for automatic garbage collection.
   components:
   - type: Sprite
     sprite: _Goobstation/Objects/Specific/Janitorial/trashbag.rsi
@@ -13,6 +14,7 @@
   - type: StorageFillVisualizer
     fillBaseName: magnet-icon
   - type: MagnetPickup
+      range: 2.5
   - type: ItemToggle
     soundActivate:
       collection: sparks
