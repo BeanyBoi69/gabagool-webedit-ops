@@ -14,7 +14,7 @@
   - type: StorageFillVisualizer
     fillBaseName: magnet-icon
   - type: MagnetPickup
-      range: 2.5
+      range: 2
   - type: ItemToggle
     soundActivate:
       collection: sparks
@@ -24,3 +24,10 @@
       collection: sparks
       params:
         variation: 0.250
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { state: magnet-icon-0 }
+          False: { state: magnet-icon-0 }
