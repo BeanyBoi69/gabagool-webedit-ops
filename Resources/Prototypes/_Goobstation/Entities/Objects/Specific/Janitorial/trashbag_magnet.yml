@@ -1,0 +1,14 @@
+﻿- type: entity
+  name: magnetized trash bag
+  id: TrashBagMagnet
+  parent: TrashBag
+  components:
+  - type: Sprite
+    layers:
+    - state: magnet-icon-0
+      map: ["enum.StorageFillLayers.Fill"]
+  - type: Item
+    heldPrefix: magnet
+  - type: StorageFillVisualizer
+    fillBaseName: magnet-icon
+  - type: MagnetPickup
