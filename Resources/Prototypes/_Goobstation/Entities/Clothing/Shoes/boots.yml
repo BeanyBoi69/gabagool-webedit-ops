@@ -340,3 +340,26 @@
     modifier: 0.5
   - type: ModifyStandingUpTime
     multiplier: 0.5
+
+# Flowery Shoes
+
+- type: entity
+  parent: ClothingShoesBootsLaceup
+  id: ClothingShoesBootsFlowery
+  name: golden laceup shoes
+  description: Well, they're more dandelion colored.
+  components:
+  - type: Sprite
+    sprite: _Goobstation\Clothing\Shoes\Boots\laceups_flowery.rsi
+  - type: Clothing
+    sprite: _Goobstation\Clothing\Shoes\Boots\laceups_flowery.rsi
+  - type: ClothingSlowOnDamageModifier
+    modifier: 0.5
+  - type: ModifyStandingUpTime
+    multiplier: 0.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.90
+        Slash: 0.90
+        Piercing: 0.90
